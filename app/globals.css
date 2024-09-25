@@ -14,14 +14,161 @@
   }
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+  background: white;
+	scroll-behavior: smooth;
+}
+*, html, body {
+
+	scroll-behavior: smooth !important;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a {
+  color: black;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+
+  .border-primaryGradient {
+    border-image: linear-gradient(90deg, rgba(245, 28, 39, 1) 0%, rgba(157, 21, 33, 1) 100%);
+  }
 }
+
+.bordered-text {
+  -webkit-text-stroke: 2px #f51c27;
+  color: white;
+}
+
+#tsparticles {
+  position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	top: 0;
+  /* width: 100%; */
+  /* height: 100%; */
+}
+
+.gallery {
+  display:flex;	
+  padding-left: 5em;
+  padding-right: 5em;
+  /* outline:1px solid red; */
+}
+
+.left {
+	width:60%;
+}
+
+.right {
+	height:100vh;
+	/* outline:1px solid purple; */
+	width:40%;
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
+}
+
+.desktopContent {
+	margin:auto;
+	width:80%;
+}
+
+.desktopContentSection {
+	min-height:80vh;
+	/* outline:1px solid green; */
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
+}
+
+
+.desktopPhotos {
+	width:100%;
+	height:100%;
+	border-radius:20px;
+	position:relative;
+	overflow:hidden;
+}
+
+.desktopPhoto {
+	position:absolute;
+	width:100%;
+	height:100%;
+}
+
+
+/* small screen / mobile layout */
+.mobileContent {
+	display:none;
+	width:100%;
+}
+
+.mobilePhoto {
+	width:100%;
+	height:100%;
+	margin-top:3em;
+  margin-bottom: 3em;
+	border-radius:6vw;
+}
+
+.circle_bg{
+  background-image: url('/Sprinkle.svg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.testimonial{
+	background-image: url('/house_sketch.jpeg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: top;
+}
+
+
+/* defines styles for screens up to 599px wide */
+@media screen and (max-width: 599px) {
+	.left {
+		display:none;
+	}
+	
+	.right {
+		height:auto;
+		width:100%;
+		align-items:center;	
+	}	
+	
+	.desktopPhotos {
+		display:none;
+	}
+	
+	.mobileContent {
+		display:block;
+	}
+	.gallery{
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+}
+
