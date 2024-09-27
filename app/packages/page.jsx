@@ -1,18 +1,30 @@
-'use client'
 import animations from "@/app/animations";
+import { Motion } from "@/app/components/AnimatedComponent";
 import SolidAccordion from "@/app/components/SolidAccordion";
 import Tabs from "@/app/components/Tabs"
-import { CLASSIC_package, PRIME_package } from "@/app/constants";
-import { motion } from "framer-motion";
-function Packages() {
+
+export const metadata = {
+  title: "Plans - Rio Livings",
+  description: "Discover your dream home with Rio Livings, the top house construction company in Kannur, Kerala.",
+};
+
+
+async function Packages() {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_BASE_URL}/api/landing/packages`);
+  const packages = await res.json();
+
+  const tabs = packages.map((pkg, index) => (
+    { id: index, label: pkg.plan, price: pkg.price, content: <SolidAccordion items={pkg.features} /> }
+  ))
+
   return (
-    <div className="p-6 lg:p-16">
+    <div className="p-6 lg:p-16 nav-padding">
       <div className="w-full lg:w-3/4">
-        <motion.h1 initial="hidden" whileInView={"visible"} variants={animations.l2r} className="text-titleColor text-3xl">Our Packages</motion.h1>
-        <motion.p initial="hidden" whileInView={"visible"} variants={animations.r2l} className="text-lg tracking-wider leading-[1.8] mt-3">
+        <Motion type={"h1"} initial="hidden" whileInView={"visible"} variants={animations.l2r} className="text-titleColor text-3xl">Our Packages</Motion>
+        <Motion type={"p"} initial="hidden" whileInView={"visible"} variants={animations.r2l} className="text-lg tracking-wider leading-[1.8] mt-3">
           Choose from our two comprehensive design packages, each tailored to meet your specific project needs and exceed your expectations.
           Let our expert team guide you through the process of turning your dream project into a stunning reality that will leave a lasting impression.
-        </motion.p>
+        </Motion>
       </div>
       <div className="w-full">
         <Tabs tabs={tabs} />
@@ -20,10 +32,5 @@ function Packages() {
     </div>
   )
 }
-
-const tabs = [
-  { id: 0, label: 'PRIME', price: PRIME_package.price, content: <SolidAccordion items={PRIME_package.features} /> },
-  { id: 1, label: 'CLASSIC', price: CLASSIC_package.price, content: <SolidAccordion items={CLASSIC_package.features} /> },
-];
 
 export default Packages

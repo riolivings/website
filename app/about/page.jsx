@@ -1,34 +1,38 @@
-'use client'
 import animations from "@/app/animations"
-import { motion } from "framer-motion"
+import { Motion } from "@/app/components/AnimatedComponent";
 
-function About() {
+export const metadata = {
+  title: "About Us - Rio Livings",
+  description: "Discover your dream home with Rio Livings, the top house construction company in Kannur, Kerala.",
+};
+
+function About() {  
   return (
     <div className="">
-      <div className='bg-[url("/about.jpeg")] bg-center bg-cover bg-fixed min-h-[70vh] relative flex items-center p-6 lg:p-16'>
+      <div className='bg-[url("/about.jpeg")] bg-center bg-cover bg-fixed min-h-[70vh] relative flex items-center p-6 lg:p-16 nav-padding'>
         <div className='absolute inset-0 bg-white/60'></div>
         <div className='relative z-10 flex gap-5 lg:items-center justify-center flex-col lg:flex-row'>
           <div className='flex-1'>
-            <motion.p initial="hidden" whileInView={"visible"} variants={animations.r2l} className='text-4xl lg:text-6xl text-titleColor font-bold w-fit pl-0 lg:pl-16'>About Us.</motion.p>
+            <Motion type={"h1"} initial="hidden" whileInView={"visible"} variants={animations.r2l} className='text-4xl lg:text-6xl text-titleColor font-bold w-fit pl-0 lg:pl-16'>About Us.</Motion>
           </div>
           <div className='flex-1 p-0 lg:p-5'>
-            <motion.div initial="hidden" whileInView={"visible"} variants={animations.b2u} className='bg-stone-100 rounded-lg shadow-xl p-5 lg:p-10 relative overflow-hidden'>
+            <Motion initial="hidden" whileInView={"visible"} variants={animations.b2u} className='bg-stone-100 rounded-lg shadow-xl p-5 lg:p-10 relative overflow-hidden'>
               <p className='tracking-wide lg:tracking-widest lg:leading-[1.8] text-lg text-textColor relative z-10'>
                 At Rio Livings, we are dedicated to turning your dream home into a reality. With a focus on quality craftsmanship, innovative design, and transparent communication, we build homes that stand the test of time. Our team of skilled professionals works closely with you, ensuring every detail reflects your vision,
                 while our real-time tracking app keeps you updated every step of the way. At Rio Livings, we don't just build homes - we create lasting legacies.
               </p>
-            </motion.div>
+            </Motion>
           </div>
         </div>
       </div>
       <div className="p-6 lg:p-20 space-y-10 lg:space-y-20 circle_bg">
         {features.map((feature, index)=>(
-          <div className="flex-col lg:flex-row flex lg:odd:flex-row-reverse gap-5 lg:gap-[10em] items-center">
-            <motion.img initial="hidden" whileInView={"visible"} variants={animations.r2l} className="w-full lg:w-1/3 rounded-md" src={`/feature${index+1}.jpg`} alt={"feature"+index} />
-            <motion.div initial="hidden" whileInView={"visible"} variants={animations.l2r}>
+          <div key={index} className="flex-col lg:flex-row flex lg:odd:flex-row-reverse gap-5 lg:gap-[10em] items-center">
+            <Motion type={"img"} initial="hidden" whileInView={"visible"} variants={animations.r2l} className="w-full lg:w-1/3 rounded-md" src={`/feature${index+1}.jpg`} alt={"feature"+index} />
+            <Motion initial="hidden" whileInView={"visible"} variants={animations.l2r}>
               <h1 className="text-2xl lg:text-3xl text-titleColor font-bold mb-3">{feature.title}</h1>
               <p className="text-sm text-textColor tracking-wider leading-[1.8] lg:text-lg text-justify">{feature.description}</p>
-            </motion.div>
+            </Motion>
           </div>
         ))}
       </div>

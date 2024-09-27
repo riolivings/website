@@ -1,3 +1,4 @@
+'use client'
 import animations from "@/app/animations";
 import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
@@ -45,7 +46,7 @@ function SolidAccordion({items, whiteText, Icon}) {
             initial="hidden" whileInView={"visible"} variants={animations.container}
           >
             {typeof(item.content) !== "string" ? 
-              item.content.map(point => <motion.p variants={animations.l2r} className={`${whiteText ? "text-textColor" : "text-white"} mt-2`}>- {point}</motion.p>)
+              item.content.map((point, index) => <motion.p key={index} variants={animations.l2r} className={`${whiteText ? "text-textColor" : "text-white"} mt-2`}>- {point}</motion.p>)
               :
               item.content
             }

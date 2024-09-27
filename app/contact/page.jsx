@@ -52,7 +52,7 @@ function Contact() {
   };
 
   return (
-    <div className="bg-[url('/world_map.jpeg')] bg-center bg-cover bg-fixed min-h-[100vh] relative flex items-center p-6 lg:p-16">
+    <div className="bg-[url('/house_sketch.jpeg')] bg-center bg-cover bg-fixed min-h-[100vh] relative flex items-center p-6  lg:p-16 nav-padding">
       <div className='absolute inset-0 bg-white/60'></div>
       <div className="relative z-10 flex flex-col lg:flex-row justify-around w-full items-center gap-10">
         <div className="space-y-5">

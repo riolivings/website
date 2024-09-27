@@ -41,7 +41,7 @@ export default function Accordion({ items, Icon, whiteText=true }) {
             ref={(el) => (contentRefs.current[index] = el)}
             className={`px-2 ${whiteText ? "text-white" : "text-textColor"} text-sm tracking-wider transition-all ease-in-out overflow-hidden`}
           >
-            {item.content}
+            {item.content?.map((content, index)=><p className={`${whiteText ? "text-white" : "text-textColor"}`} key={index}>- {content}</p> )}
           </div>
         </motion.div>
       ))}

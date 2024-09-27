@@ -1,3 +1,4 @@
+'use client'
 import { useState } from 'react';
 
 const Tabs = ({ tabs = [] }) => {
@@ -7,9 +8,9 @@ const Tabs = ({ tabs = [] }) => {
   return (
     <div className="w-full mx-auto mt-10">
       <div className="flex border-b border-gray-200">
-        {tabs.map((tab) => (
+        {tabs.map((tab, index) => (
           <button
-            key={tab.id}
+            key={index}
             className={`py-2 mr-2 lg:mr-6 text-xl focus:outline-none font-bold tracking-widest flex flex-col gap-1 ${activeTab === tab.id
                 ? 'border-b-2 border-primary text-primary'
                 : 'text-gray-500'

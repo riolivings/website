@@ -17,7 +17,9 @@
     "next": "14.2.9",
     "react": "^18",
     "react-device-mockup": "^1.0.0",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "react-image-gallery": "^1.3.0",
+    "react-responsive-carousel": "^3.2.23"
   },
   "devDependencies": {
     "postcss": "^8",
