@@ -34,7 +34,6 @@ function Contact() {
         console.log('SUCCESS!', response.status, response.text);
         alert('Form submitted successfully!');
       })
-      
       .catch((err) => {
         console.log('FAILED...', err);
         alert('Failed to send the email.');
