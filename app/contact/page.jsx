@@ -1,6 +1,7 @@
 'use client'
 import { useState } from "react";
 import emailjs from 'emailjs-com';
+import Link from "next/link";
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -21,7 +22,7 @@ function Contact() {
   };
 
   const handleSubmit = (e) => {
-    if(loading) return
+    if (loading) return
     setLoading(true)
     e.preventDefault();
     console.log('Form Data:', formData);
@@ -59,12 +60,14 @@ function Contact() {
           <h1 className="font-bold text-titleColor text-4xl">LET'S <br />DISCUSS <br />YOUR PROJECT <br />WITH US</h1>
           <div className="flex items-start gap-3">
             <img src="/phone.png" alt="phone_logo" className="w-6" />
-            <p className="font-bold tracking-widest">+91 9947135878</p>
-            <p className="font-bold tracking-widest">+91 9207135878</p>
+            <div>
+              <p className="font-bold tracking-widest"><Link href={"tel:+919947135878"}>+91 9947135878</Link></p>
+              <p className="font-bold tracking-widest"><Link href={"tel:+919207135878"}>+91 9207135878</Link></p>
+            </div>
           </div>
           <div className="flex items-center gap-3">
             <img src="/email.png" alt="email_logo" className="w-6" />
-            <p className="font-bold tracking-widest">riolivings@gmail.com</p>
+            <p className="font-bold tracking-widest"><Link href={"mailto:riolivings@gmail.com"}>riolivings@gmail.com</Link></p>
           </div>
           <div className="flex items-start gap-3">
             <img src="/address.png" alt="phone_logo" className="w-6" />

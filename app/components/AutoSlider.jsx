@@ -29,13 +29,13 @@ const AutoSlider = ({children}) => {
       </div> */}
 
       {/* Indicators */}
-      <div className="absolute bottom-5 left-1/2 transform -translate-x-1/2 flex space-x-3 z-20">
+      <div className="absolute bottom-5 left-1/2 transform -translate-x-1/2 flex space-x-3 z-10">
         {children.map((_, index) => (
           <div
             key={index}
             onClick={() => setCurrentIndex(index)}
             className={`w-3 h-3 rounded-full cursor-pointer ${
-              currentIndex === index ? 'bg-white' : 'bg-gray-400'
+              currentIndex === index ? 'bg-primary' : 'bg-stone-600'
             }`}
           ></div>
         ))}

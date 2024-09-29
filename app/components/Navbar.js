@@ -11,9 +11,10 @@ export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const pathname = usePathname();
   const ref = useRef(null);
+  const buttonRef = useRef(null);
 
   const [bgColor, setBgColor] = useState("bg-transparent");
-  const [textColor, setTextColor] = useState("text-white");
+  const [textColor, setTextColor] = useState("lg:text-white");
 
   useEffect(() => {
     const handleScroll = () => {
@@ -21,14 +22,14 @@ export default function Navbar() {
         const scrollY = window.scrollY;
         if (scrollY > 50) {
           setBgColor('bg-white shadow-lg'); // Change to solid background
-          setTextColor("text-black")
+          setTextColor("lg:text-black")
         } else {
           setBgColor('bg-transparent'); // Keep transparent at the top
-          setTextColor("text-white")
+          setTextColor("lg:text-white")
         }
       } else {
         setBgColor('bg-white shadow-lg'); // Solid background for other pages
-        setTextColor("text-black")
+        setTextColor("lg:text-black")
       }
     };
 
@@ -46,7 +47,7 @@ export default function Navbar() {
 
   useEffect(() => {
     const handleClick = (event) => {
-      if (ref.current && !ref.current.contains(event.target)) {
+      if ((ref.current && !ref.current.contains(event.target)) && (buttonRef.current && !buttonRef.current.contains(event.target))) {        
         setIsMenuOpen(false)
       }
     };
@@ -63,13 +64,7 @@ export default function Navbar() {
           <img className={`w-1/3 lg:w-1/6 transition-all ${isMenuOpen ? "opacity-0" : "opacity-100"}`} src='/logo.png' alt='logo' />
         </Link>
         <div className="lg:hidden">
-          {/* <button onClick={toggleMenu} className="navbar-burger flex items-center text-blue-600 p-3">
-            <svg className="block h-4 w-4 fill-current" viewBox="0 0 20 20">
-              <title>Mobile menu</title>
-              <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
-            </svg>
-          </button> */}
-          <Hamburger isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
+          <Hamburger ref={buttonRef} isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
         </div>
         {/* Mobile menu */}
         <ul
@@ -97,6 +92,6 @@ export default function Navbar() {
 }
 
 const NavItem = ({ label, path, active, color }) => (
-  <li><Link href={path} className={`text-lg lg:text-sm ${active ? 'text-primary font-bold' : `${color} hover:text-stone-300`}`}>{label}</Link></li>
+  <li><Link href={path} className={`text-lg lg:text-sm ${active ? 'text-primary font-bold' : `text-white ${color} hover:text-stone-300`}`}>{label}</Link></li>
 )
 

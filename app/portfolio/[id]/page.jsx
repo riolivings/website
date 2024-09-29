@@ -20,11 +20,11 @@ async function page({ params }) {
   return (
     <div className="p-6 lg:p-16 nav-padding space-y-5">
       <Motion initial="hidden" whileInView={"visible"} variants={animations.l2r} className="text-titleColor text-3xl">Crafted with Excellence</Motion>
-      <div className="flex gap-3 items-start">
-        <div className="w-3/4">
+      <div className="flex flex-col lg:flex-row gap-3 items-start">
+        <div className="w-full lg:w-3/4">
           <GalleryComponent images={portfolio?.images} />
         </div>
-        <div className="flex-1 bg-stone-100 p-5 rounded-lg border border-stone-300">
+        <div className="w-full lg:w-auto flex-1 bg-stone-100 p-5 rounded-lg border border-stone-300">
           <p className="mb-1">Client: <strong>{portfolio.name}</strong></p>
           <p className="mb-1">Location: <strong>{portfolio.place}</strong></p>
           <p className="mb-1">Project Details: <strong>{portfolio.projectDetails || "2,500 SQFT"}</strong></p>

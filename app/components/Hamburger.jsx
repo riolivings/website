@@ -1,9 +1,12 @@
-const Hamburger = ({ isMenuOpen, setIsMenuOpen }) => {
+import { forwardRef } from "react";
 
-  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+const Hamburger = forwardRef(({ isMenuOpen, setIsMenuOpen }, ref) => {
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen)
+  };
 
   return (
-    <button onClick={toggleMenu}
+    <button ref={ref} onClick={toggleMenu}
       className="flex flex-col justify-center items-center">
       <span className={`bg-primary block transition-all duration-300 ease-out 
                     h-0.5 w-6 rounded-sm ${isMenuOpen ?
@@ -22,6 +25,6 @@ const Hamburger = ({ isMenuOpen, setIsMenuOpen }) => {
       </span>
     </button >
   );
-};
+})
 
 export default Hamburger;
