@@ -10,8 +10,14 @@ export const metadata = {
 
 
 async function Packages() {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_BASE_URL}/api/landing/packages`);
+  const res = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_BASE_URL}/api/landing/packages`,  {
+    next: { revalidate: parseInt(process.env.REVALIDATE_PERIOD) }, // Revalidate the data every 60 seconds
+  });
   const packages = await res.json();
+
+  if(!packages || packages.length === 0){
+    return <p>No packages added</p>
+  }
 
   const tabs = packages.map((pkg, index) => (
     { id: index, label: pkg.plan, price: pkg.price, content: <SolidAccordion items={pkg.features} /> }

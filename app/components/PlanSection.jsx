@@ -3,7 +3,9 @@ import Accordion from '@/app/components/Accordion'
 import { Motion } from '@/app/components/AnimatedComponent'
 
 async function PlanSection() {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_BASE_URL}/api/landing/packages`);
+  const res = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_BASE_URL}/api/landing/packages`, {
+    next: { revalidate: parseInt(process.env.REVALIDATE_PERIOD) }, // Revalidate the data every 60 seconds
+  });
   const packages = await res.json();
 
   return (

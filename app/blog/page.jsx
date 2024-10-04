@@ -9,7 +9,13 @@ export const metadata = {
 
 
 async function Blogs() {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_BASE_URL}/api/landing/blog-posts`);
+  const res = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_BASE_URL}/api/landing/blog-posts`, {
+    next: { revalidate: parseInt(process.env.REVALIDATE_PERIOD) }, // Revalidate the data every 60 seconds
+  });
+
+  if (!res.ok) {
+    return <p>Sorry an error occured. Please try again!</p>
+  }
   const blogs = await res.json();
 
   return (

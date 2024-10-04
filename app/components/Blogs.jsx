@@ -4,7 +4,9 @@ import { blogData, formatDate } from "@/app/constants"
 import Link from "next/link"
 
 async function Blogs() {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_BASE_URL}/api/landing/blog-posts`);
+  const res = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_BASE_URL}/api/landing/blog-posts`, {
+    next: { revalidate: parseInt(process.env.REVALIDATE_PERIOD) }, // Revalidate the data every 60 seconds
+  });
   const blogs = await res.json();
 
   return (
@@ -26,7 +28,7 @@ async function Blogs() {
 export const BlogItem = ({ item: { image, title, content, date, _id } }) => {
   return <Link href={`/blog/${_id}`} className="w-full lg:w-1/4 bg-white shadow-xl border border-stone-200 rounded-lg group hover:scale-110 transition-all overflow-hidden duration-500 cursor-pointer">
     <div
-      
+
     >
       <img src={process.env.NEXT_PUBLIC_S3_BASE_URL + image} alt="" className="rounded-t-lg group-hover:scale-105 transition-all duration-500" />
       <div className="p-5">
