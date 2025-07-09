@@ -1,0 +1,161 @@
+.container {
+  min-height: 100vh;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5rem 0 0 0;
+}
+
+.header {
+  text-align: center;
+  color: #1a202c;
+  font-weight: bold;
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.subheader {
+  text-align: center;
+  color: #4b5563;
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  max-width: 40rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.summary {
+  background: #f8fafc;
+  border: 1px solid #e5e7eb;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  margin-bottom: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.03);
+}
+
+.carousel {
+  display: flex;
+  gap: 2rem;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-top: 2rem;
+}
+
+.slide {
+  transition: all 0.5s;
+  width: 90vw;
+  max-width: 32rem;
+  background: #fff;
+  border-radius: 1.5rem;
+  box-shadow: 0 8px 32px 0 rgba(0,0,0,0.10);
+  border: 4px solid #e5e7eb;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+
+.slideInactive {
+  opacity: 0.6;
+  transform: scale(0.9);
+  z-index: 0;
+}
+
+.slideActive {
+  opacity: 1;
+  transform: scale(1);
+  z-index: 10;
+}
+
+.slideImage {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.7s;
+}
+
+.slideText {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  background: linear-gradient(to top, rgba(0,0,0,0.8) 60%, rgba(0,0,0,0.3) 90%, transparent 100%);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.slideTitle {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.slideTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  color: #fff;
+  font-size: 0.95rem;
+}
+
+.tag {
+  background: #ff9e70cc;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-weight: 600;
+}
+
+.dots {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.dot {
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+  background: #e5e7eb;
+  transition: background 0.3s;
+  border: none;
+}
+
+.dotActive {
+  background: #ff9e70;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #ff9e70cc;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.10);
+  cursor: pointer;
+  z-index: 20;
+  transition: background 0.3s;
+}
+
+.arrowLeft {
+  left: -2.5rem;
+}
+
+.arrowRight {
+  right: -2.5rem;
+}

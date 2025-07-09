@@ -4,10 +4,17 @@ import { blogData, formatDate } from "@/app/constants"
 import Link from "next/link"
 
 async function Blogs() {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_BASE_URL}/api/landing/blog-posts`, {
-    next: { revalidate: parseInt(process.env.NEXT_PUBLIC_REVALIDATE_PERIOD) }, // Revalidate the data every 60 seconds
-  });
-  const blogs = await res.json();
+  let blogs = [];
+  try {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_BASE_URL}/api/landing/blog-posts`, {
+      next: { revalidate: parseInt(process.env.NEXT_PUBLIC_REVALIDATE_PERIOD) }, // Revalidate the data every 60 seconds
+    });
+    if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
+    blogs = await res.json();
+  } catch (error) {
+    console.error('Fetch failed:', error);
+    // Optionally, you can show a fallback UI or message here
+  }
 
   return (
     <div className="p-6 lg:p-16 mt-10">

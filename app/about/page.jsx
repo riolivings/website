@@ -6,7 +6,7 @@ export const metadata = {
   description: "Discover your dream home with Rio Livings, the top house construction company in Kannur, Kerala.",
 };
 
-function About() {  
+function About() {
   return (
     <div className="">
       <div className='bg-[url("/about.jpeg")] bg-center bg-cover bg-fixed min-h-[70vh] relative flex items-center p-6 lg:p-16 nav-padding'>
@@ -18,17 +18,18 @@ function About() {
           <div className='flex-1 p-0 lg:p-5'>
             <Motion initial="hidden" whileInView={"visible"} variants={animations.b2u} className='bg-stone-100 rounded-lg shadow-xl p-5 lg:p-10 relative overflow-hidden'>
               <p className='tracking-wide lg:tracking-widest lg:leading-[1.8] text-lg text-textColor relative z-10'>
-                At Rio Livings, we are dedicated to turning your dream home into a reality. With a focus on quality craftsmanship, innovative design, and transparent communication, we build homes that stand the test of time. Our team of skilled professionals works closely with you, ensuring every detail reflects your vision,
-                while our real-time tracking app keeps you updated every step of the way. At Rio Livings, we don't just build homes - we create lasting legacies.
+                Rio Livings is the best construction company in Iritty, offering complete home-building solutions from design to delivery. With a strong focus on quality, transparency, and customer satisfaction, we have earned our place as one of the best builders in Iritty.
+
+                Our team includes some of the best architects in Iritty, known for creating innovative, functional, and elegant home designs that perfectly match your lifestyle. From architectural planning and construction to interior design and renovation, Rio Livings provides end-to-end services under one trusted name.
               </p>
             </Motion>
           </div>
         </div>
       </div>
       <div className="p-6 lg:p-20 space-y-10 lg:space-y-20 circle_bg">
-        {features.map((feature, index)=>(
+        {features.map((feature, index) => (
           <div key={index} className="flex-col lg:flex-row flex lg:odd:flex-row-reverse gap-5 lg:gap-[10em] items-center">
-            <Motion type={"img"} initial="hidden" whileInView={"visible"} variants={animations.r2l} className="w-full lg:w-1/3 rounded-md" src={`/feature${index+1}.jpg`} alt={"feature"+index} />
+            <Motion type={"img"} initial="hidden" whileInView={"visible"} variants={animations.r2l} className="w-full lg:w-1/3 rounded-md" src={`/feature${index + 1}.jpg`} alt={"feature" + index} />
             <Motion initial="hidden" whileInView={"visible"} variants={animations.l2r}>
               <h1 className="text-2xl lg:text-3xl text-titleColor font-bold mb-3">{feature.title}</h1>
               <p className="text-sm text-textColor tracking-wider leading-[1.8] lg:text-lg text-justify">{feature.description}</p>

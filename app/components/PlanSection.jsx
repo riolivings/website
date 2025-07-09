@@ -3,10 +3,19 @@ import Accordion from '@/app/components/Accordion'
 import { Motion } from '@/app/components/AnimatedComponent'
 
 async function PlanSection() {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_BASE_URL}/api/landing/packages`, {
-    next: { revalidate: parseInt(process.env.NEXT_PUBLIC_REVALIDATE_PERIOD) }, // Revalidate the data every 60 seconds
-  });
-  const packages = await res.json();
+  console.log(process.env.NEXT_PUBLIC_BACKEND_BASE_URL);
+  
+  let packages = [];
+  try {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_BASE_URL}/api/landing/packages`, {
+      next: { revalidate: parseInt(process.env.NEXT_PUBLIC_REVALIDATE_PERIOD) }, // Revalidate the data every 60 seconds
+    });
+    if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
+    packages = await res.json();
+  } catch (error) {
+    console.error('Fetch failed:', error);
+    // Optionally, you can show a fallback UI or message here
+  }
 
   return (
     <div className='grid grid-cols-1 lg:grid-cols-3 p-6 lg:p-16 gap-10 mt-10'>
