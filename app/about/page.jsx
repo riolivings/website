@@ -18,7 +18,7 @@ function About() {
           <div className='flex-1 p-0 lg:p-5'>
             <Motion initial="hidden" whileInView={"visible"} variants={animations.b2u} className='bg-stone-100 rounded-lg shadow-xl p-5 lg:p-10 relative overflow-hidden'>
               <p className='tracking-wide lg:tracking-widest lg:leading-[1.8] text-lg text-textColor relative z-10'>
-                Rio Livings is the best construction company in Iritty, offering complete home-building solutions from design to delivery. With a strong focus on quality, transparency, and customer satisfaction, we have earned our place as one of the best builders in Iritty.
+                Rio Livings is the best construction company in Kannur, offering complete home-building solutions from design to delivery. With a strong focus on quality, transparency, and customer satisfaction, we have earned our place as one of the best builders in Iritty.
 
                 Our team includes some of the best architects in Iritty, known for creating innovative, functional, and elegant home designs that perfectly match your lifestyle. From architectural planning and construction to interior design and renovation, Rio Livings provides end-to-end services under one trusted name.
               </p>
