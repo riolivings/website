@@ -7,7 +7,7 @@ function Footer() {
       <div className="flex-1 flex flex-col justify-between">
         <div className="flex flex-col gap-1 text-2xl text-textColor">
           <a href="tel:+919947135878" className="text-textColor">+91 9947135878</a>
-          <a href="mailto:riolivings@gmail.com" className="text-textColor">riolivings@gmail.com</a>
+          <a href="mailto:info@riolivings.com" className="text-textColor">info@riolivings.com</a>
         </div>
         <div className="mt-5">
           <div className="flex gap-3 items-center">
@@ -17,14 +17,14 @@ function Footer() {
             <Link target="_blank" href={"https://linkedin.com"}><img className="w-8" src="/linkedin.png" alt="linkedin_logo" /></Link>
             <Link target="_blank" href={"https://twitter.com"}><img className="w-8" src="/X.png" alt="twitter_logo" /></Link>
           </div>
-          <p className="mt-3 text-sm">@ 2024 RioLivings All Rights Reserved</p>
+          <p className="mt-3 text-sm">@ 2025 RioLivings All Rights Reserved</p>
           <p className="text-sm">Developed by <a href="">Sophise Technologies</a></p>
         </div>
       </div>
       <div className="w-fit flex-1 flex flex-col justify-between">
         <img className="w-[10em]" src="/logo.png" alt="" />
         <div className="mt-5 w-fit text-lg">
-          <p className="text-textColor leading-[1.1]">Office: <br />Keezhur Kunnu, Iritty <br /> Kannur, Kerala, 670703</p>
+          <p className="text-textColor leading-[1.1]">Office: <br />71/V,Keezhur Kunnu, Iritty <br /> Kannur, Kerala, 670703</p>
         </div>
       </div>
       <div className="hidden lg:flex flex-col gap-3 text-lg flex-1">
