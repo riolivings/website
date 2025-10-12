@@ -9,7 +9,7 @@ export const metadata = {
 };
 
 
-async function page() {
+async function Portfolio() {
   const res = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_BASE_URL}/api/landing/portfolios`,  {
     next: { revalidate: parseInt(process.env.NEXT_PUBLIC_REVALIDATE_PERIOD) }, // Revalidate the data every 60 seconds
   });
@@ -32,4 +32,4 @@ async function page() {
     </div>
   )
 }
-export default page
+export default Portfolio
