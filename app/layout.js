@@ -25,7 +25,7 @@ const mdata = {
   description: "Leading house construction company in Kannur, Kerala, specializing in custom homes and quality materials. Build your dream home with us!",
   keywords: "construction company in Iritty, home construction in Iritty, builders in Iritty, architects in Iritty, custom home builders in Iritty, house construction in Kannur, construction company in Kannur, residential builders in Iritty, best home builders in Iritty, top construction company in Kannur, best construction company in Iritty for home building, trusted builders and architects in Iritty, affordable house construction in Iritty, turnkey home construction in Kannur, home construction with real-time progress app, professional architects for Kerala-style homes, real-time home construction tracking in Iritty, reliable building contractors in Iritty, villa construction experts in Kannur, budget home construction in Iritty, real-time construction app, custom home design Iritty, architecture and interior design in Iritty, civil construction services in Iritty, residential construction in Kannur, planning and building services in Kerala House construction, home builders, Kannur, Kerala, residential construction, architectural design, quality materials, affordable housing, custom homes, construction services",
   openGraph: {
-    title: "Rio Livings | Premier House Construction in Kannur, Kerala",
+    title: "Rio Livings | Best Construction Company in Iritty",
     description: "Build your dream home with Rio Livings, the leading construction company in Kannur, Kerala. Expert design and quality materials.",
     url: "https://riolivings.com",  // Replace with your actual URL
     type: "website",
