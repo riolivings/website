@@ -42,12 +42,12 @@ export default function BestArchitectIritty({ params }) {
       <div className="lg:p-16 space-y-5">
     {/* Introduction Heading with Primary Keyword */}
     <p className="text-xl font-bold tracking-wider border-l-4 border-primary pl-3">
-        Searching for the **Best Architects in Iritty**?
+  
     </p>
 
     {/* Description Paragraph with SEO Copy and Anchor Link */}
     <p>
-        Look no further than **Rio Livings**. As Iritty's leading design and build firm, we seamlessly combine innovative architectural vision with premium, transparent construction. We don't just create blueprints; we craft homes that are aesthetically stunning, highly functional, and built to last for generations. Explore our projects and start your journey with the top builders in Kannur today: <a href="https://riolivings.com/projects" className="text-blue-600 hover:text-blue-800 underline font-medium">View Our Portfolio</a>.
+        looking for the best architects in iritty? Look no further than Rio Livings. As Iritty's leading design and build firm, we seamlessly combine innovative architectural vision with premium, transparent construction. We don't just create blueprints; we craft homes that are aesthetically stunning, highly functional, and built to last for generations. Explore our projects and start your journey with the top builders in Kannur today: <a href="https://riolivings.com/portfolio" className="text-blue-600 hover:text-blue-800 underline font-medium">View Our Portfolio</a>.
     </p>
 </div>
       <div>
