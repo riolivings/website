@@ -40,9 +40,16 @@ export default function BestArchitectIritty({ params }) {
         <img src={'https://www.park.edu/wp-content/uploads/2025/04/Construction-Management-Park-University-min.png'} alt="blog_image" className="m-auto block rounded-lg w-full lg:w-3/4" />
       </div>
       <div className="lg:p-16 space-y-5">
-        <p className="text-xl font-bold tracking-wider border-l-4 border-primary pl-3">Introductfaftaygyafgasgfgasion</p>
-        <p>Descriptionrdrttygguhuhuhihhihiohug <a href="https://riolivings.com">hjhguihh</a> goes here</p>
-      </div>
+    {/* Introduction Heading with Primary Keyword */}
+    <p className="text-xl font-bold tracking-wider border-l-4 border-primary pl-3">
+        Searching for the **Best Architects in Iritty**?
+    </p>
+
+    {/* Description Paragraph with SEO Copy and Anchor Link */}
+    <p>
+        Look no further than **Rio Livings**. As Iritty's leading design and build firm, we seamlessly combine innovative architectural vision with premium, transparent construction. We don't just create blueprints; we craft homes that are aesthetically stunning, highly functional, and built to last for generations. Explore our projects and start your journey with the top builders in Kannur today: <a href="https://riolivings.com/projects" className="text-blue-600 hover:text-blue-800 underline font-medium">View Our Portfolio</a>.
+    </p>
+</div>
       <div>
         <p>Additional Description if required</p>
       </div>
