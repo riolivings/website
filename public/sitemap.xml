@@ -14,4 +14,11 @@
 		<changefreq>yearly</changefreq>
 		<priority>0.8</priority>
 	</url>
+	<!-- Best Architects in Iritty -->
+	<url>
+		<loc>https://www.riolivings.com/best-architects-in-iritty</loc>
+		<lastmod>2025-10-14</lastmod>
+		<changefreq>yearly</changefreq>
+		<priority>1.0</priority>
+	</url>
 </urlset>
