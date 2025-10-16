@@ -44,19 +44,19 @@ export default function BestBuildersIritty({ params }) {
 
         {/* Description Paragraph with SEO Copy and Internal Link */}
         <p className="text-lg tracking-wider leading-[1.8]">
-          When it comes to constructing your dream home, choosing the **best builders in Iritty** is crucial. At Rio Livings, we stand out as the **top builders in Iritty** by offering a seamless design-and-build experience. We manage everything from innovative architectural design to transparent, high-quality construction. Our commitment is to deliver homes that are not only beautiful and functional but also built with lasting integrity. If you are looking for reliable **builders in Iritty**, partner with the experts. Learn more about our vision and company at our main site: <a href="https://www.riolivings.com" className="text-blue-600 hover:text-blue-800 underline font-medium">Rio Livings Home</a>.
+          When it comes to constructing your dream home, choosing the <a href="https://www.riolivings.com" className="text-blue-600 hover:text-blue-800 underline font-medium">best builders in Iritty</a> is crucial. At Rio Livings, we stand out as the **top builders in Iritty** by offering a seamless design-and-build experience. We manage everything from innovative architectural design to transparent, high-quality construction. Our commitment is to deliver homes that are not only beautiful and functional but also built with lasting integrity. If you are looking for reliable **builders in Iritty**, partner with the experts. Learn more about our vision and company at our main site: <a href="https://www.riolivings.com" className="text-blue-600 hover:text-blue-800 underline font-medium">Rio Livings </a>.
         </p>
         
         {/* Secondary Heading for Keyword focus */}
         <h2 className="text-xl font-semibold mt-8 text-titleColor">Why Choose Our Building Services in Iritty?</h2>
         <p className="text-lg tracking-wider leading-[1.8]">
-          We believe being the **best builders in Iritty** means more than just constructing walls; it means building trust. Our portfolio showcases diverse projects, each delivered on time and within budget, making us the preferred choice among **top builders in Iritty**. We ensure premium materials and meticulous craftsmanship in every build.
+          We believe being the best builders in Iritty means more than just constructing walls; it means building trust. Our portfolio showcases diverse projects, each delivered on time and within budget, making us the preferred choice among **top builders in Iritty**. We ensure premium materials and meticulous craftsmanship in every build.
         </p>
       </div>
       
       {/* Existing content adapted for the new context */}
       <div>
-        <p className="text-xl font-semibold">Architectural Excellence by Builders in Iritty</p>
+        <p className="text-xl font-semibold"></p>
       </div>
 
       <Services />
