@@ -13,4 +13,4 @@ function WhatsappIcon() {
   )
 }
 
-export default WhatsappIcon
+export default WhatsappIcongi
