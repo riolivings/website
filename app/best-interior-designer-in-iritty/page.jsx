@@ -80,7 +80,7 @@ export default function BestArchitectIritty({ params }) {
 
         {/* Title */}
         <h1 className="text-2xl lg:text-3xl font-bold text-titleColor w-full lg:w-1/2 m-auto block capitalize tracking-wider leading-[1.3]">
-          Best Architects in Iritty
+          Best Interior Designer In Iritty
         </h1>
         {/* Ttiel Ends */}
 
@@ -96,11 +96,11 @@ export default function BestArchitectIritty({ params }) {
 
     {/* Description Paragraph with SEO Copy and Anchor Link */}
     <p>
-        looking for the best architects in iritty? Look no further than Rio Livings. As Iritty's leading design and build firm, we seamlessly combine innovative architectural vision with premium, transparent construction. We don't just create blueprints; we craft homes that are aesthetically stunning, highly functional, and built to last for generations. Explore our projects and start your journey with the top builders in Kannur today: <a href="https://riolivings.com/portfolio" className="text-blue-600 hover:text-blue-800 underline font-medium">View Our Portfolio</a>.
+        looking for the best interior designer in iritty? Look no further than Rio Livings. As Iritty's leading design and build firm, we seamlessly combine innovative architectural vision with premium, transparent construction. We don't just create blueprints; we craft homes that are aesthetically stunning, highly functional, and built to last for generations. Explore our projects and start your journey with the top builders in Kannur today: <a href="https://riolivings.com/portfolio" className="text-blue-600 hover:text-blue-800 underline font-medium">View Our Portfolio</a>.
     </p>
 </div>
       <div>
-        <p>Best Builders in Iritty</p>
+        <p>Best Builders ihhwfdwefwedfwefiwdijdlkaskd;asodjsnkcsldwedewkdkwjldkl;wekdklwejdn Iritty</p>
       </div>
 
       <Services />
